@@ -2,22 +2,23 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { VitePWA } from "vite-plugin-pwa";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    tsconfigPaths(),
     tailwindcss(),
     VitePWA({
-      registerType: "autoUpdate",
-      devOptions: {
-        enabled: true,
+      workbox: {
+        maximumFileSizeToCacheInBytes: 10000000,
       },
+      includeAssets: ["favicon.ico", "apple-touch-icon.png", "mask-icon.svg"],
       manifest: {
-        name: "한끼하자", // 설치 배너에 표시되는 이름
-        short_name: "한끼하자", // 아이콘 아래에 표시될 이름
-        description: "팀 가티의 프로젝트, 한끼하자 입니다.",
-        lang: "ko",
+        name: "fooodding",
+        short_name: "fooodding",
+        theme_color: "#ffffff",
         icons: [
           {
             src: "pwa-64x64.png",

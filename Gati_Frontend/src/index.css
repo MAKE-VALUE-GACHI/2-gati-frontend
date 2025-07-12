@@ -13,4 +13,5 @@ body,
 #root {
   height: 100%;
   font-family: "Pretendard", sans-serif;
+  background-color: rgb(246, 246, 246);
 }

@@ -4,9 +4,9 @@ import Footer from "./Common/TheFooter";
 
 const ContainerTemplate = ({ children }: IContainer) => {
   return (
-    <main className="h-full p-8">
+    <main className="h-full">
       <Header />
-      <div className="flex flex-col gap-8 mx-auto">{children}</div>
+      <div className="flex flex-col gap-8 mx-auto pt-24">{children}</div>
       <Footer />
     </main>
   );

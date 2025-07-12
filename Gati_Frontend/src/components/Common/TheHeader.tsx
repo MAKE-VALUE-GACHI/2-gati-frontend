@@ -4,7 +4,7 @@ const Header = (/* input 여부를 받아서 여기 상속 */) => {
   const nav = useNavigate();
 
   return (
-    <div className="flex pt-2 pb-8">
+    <div className="fixed top-0 left-0 w-full flex items-center justify-between p-8 bg-white">
       <img
         src="/logo/Logo.png"
         alt="한끼하자 로고"

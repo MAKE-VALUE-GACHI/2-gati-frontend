@@ -6,7 +6,7 @@ const ContainerTemplate = ({ children }: IContainer) => {
   return (
     <main className="h-full">
       <Header />
-      <div className="flex flex-col gap-8 mx-auto pt-24">{children}</div>
+      <div className="flex flex-col gap-4 mx-auto pt-24">{children}</div>
       <Footer />
     </main>
   );

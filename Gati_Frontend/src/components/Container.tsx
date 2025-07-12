@@ -1,13 +1,15 @@
 import { IContainer } from "@interface/Common";
 import Header from "@components/Common/TheHeader";
+import Footer from "./Common/TheFooter";
 
-const Container = ({ children }: IContainer) => {
+const ContainerTemplate = ({ children }: IContainer) => {
   return (
-    <main className="h-full pt-16">
+    <main className="h-full p-8">
       <Header />
-      <div className="flex flex-col gap-12 mx-auto">{children}</div>
+      <div className="flex flex-col gap-8 mx-auto">{children}</div>
+      <Footer />
     </main>
   );
 };
 
-export default Container;
+export default ContainerTemplate;

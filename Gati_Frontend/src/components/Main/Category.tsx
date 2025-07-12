@@ -1,7 +1,13 @@
 const Category = () => {
   return (
     <>
-      <div>카테고리 6개</div>
+      <div className="flex">
+        <img src="/assets/bibimbap.png" />
+        <img src="/assets/bibimbap.png" />
+        <img src="/assets/bibimbap.png" />
+        <img src="/assets/bibimbap.png" />
+        <img src="/assets/bibimbap.png" />
+      </div>
     </>
   );
 };

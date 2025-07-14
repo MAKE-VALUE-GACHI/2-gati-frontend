@@ -8,7 +8,7 @@ const Footer = () => {
   const nav = useNavigate();
 
   return (
-    <footer className="fixed bottom-0 left-0 w-full flex p-8 justify-around bg-white">
+    <footer className="fixed bottom-0 left-0 w-full flex px-8 py-6 justify-around bg-white">
       <div
         onClick={() => nav("/")}
         className="flex flex-2 flex-col items-center justify-between gap-1 basis-1/4"

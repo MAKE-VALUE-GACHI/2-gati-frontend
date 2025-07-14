@@ -34,11 +34,11 @@ const Carousel = () => {
               <h2 className="text-3xl font-extrabold mr-2">
                 {dummyData[index].title}
               </h2>
-              <span className="text-sm text-gray-200">
-                made by. {dummyData[index].author}
-              </span>
             </div>
-            <p className="text-sm">in {dummyData[index].location}</p>
+            <span className="text-sm text-gray-200">
+              made by. {dummyData[index].author}
+            </span>
+            {/* <p className="text-sm">in {dummyData[index].location}</p> */}
           </div>
         </motion.div>
       </AnimatePresence>
@@ -79,7 +79,7 @@ const dummyData: ICarouselItem[] = [
     imageURL:
       "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
     description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
-    title: "떡국떡 떡볶이",
+    title: "육회비빔밥돌솥정식",
     author: "송정동맛주먹",
     location: "부산광역시 해운대구 송정동",
   },
@@ -88,7 +88,7 @@ const dummyData: ICarouselItem[] = [
     imageURL:
       "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
     description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
-    title: "떡국떡 떡볶이",
+    title: "마라로제크림파스타",
     author: "송정동맛주먹",
     location: "부산광역시 해운대구 송정동",
   },
@@ -97,7 +97,7 @@ const dummyData: ICarouselItem[] = [
     imageURL:
       "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
     description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
-    title: "떡국떡 떡볶이",
+    title: "내가 집에서 만든 쿠키",
     author: "송정동맛주먹",
     location: "부산광역시 해운대구 송정동",
   },
@@ -106,7 +106,7 @@ const dummyData: ICarouselItem[] = [
     imageURL:
       "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
     description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
-    title: "떡국떡 떡볶이",
+    title: "참치마요계란치즈김밥튀김롤",
     author: "송정동맛주먹",
     location: "부산광역시 해운대구 송정동",
   },

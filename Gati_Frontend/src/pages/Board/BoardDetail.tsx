@@ -5,8 +5,10 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import { FaStar } from "react-icons/fa";
+
 import Button from "@components/Common/Button";
 import Loading from "@components/Common/Loading";
+import WriterReview from "@components/Review/WriterReview";
 
 const BoardDetail = () => {
   const nav = useNavigate();
@@ -76,6 +78,8 @@ const BoardDetail = () => {
         <hr className="text-gray my-4" />
 
         <p className="whitespace-pre-wrap mb-4">{content}</p>
+
+        <WriterReview />
       </div>
 
       {/* 나중에 작성자와 로그인된 사람이 일치하는지 확인 */}

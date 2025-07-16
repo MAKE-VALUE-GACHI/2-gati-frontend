@@ -3,11 +3,14 @@ import MyProfile from "@components/MyPage/MyProfile";
 import MyShareList from "@components/MyPage/MyShareList";
 import { IProfile } from "@interface/User";
 
-import { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
 
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 const MyPage = () => {
+  const nav = useNavigate();
   const [profile, setProfile] = useState<IProfile>({
     name: "예흔",
     email: "efsefsfe@gmail.com",
@@ -24,7 +27,7 @@ const MyPage = () => {
           <IoIosArrowBack size={18} />
           <span>마이 페이지</span>
         </div>
-        <IoSettingsOutline size={18} />
+        <IoSettingsOutline size={18} onClick={() => nav("/setting")} />
       </div>
 
       <MyProfile profile={profile} />

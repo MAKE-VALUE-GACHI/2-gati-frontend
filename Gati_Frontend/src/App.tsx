@@ -5,6 +5,7 @@ import Main from "./pages/Main/Main";
 import SearchList from "@pages/Search/Search";
 import MyPage from "@pages/MyPage/MyPage";
 import ChatList from "@pages/Sharing/Chat";
+import Setting from "@pages/MyPage/Setting";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/search" element={<SearchList />} />
         <Route path="/myPage" element={<MyPage />} />
         <Route path="/chat" element={<ChatList />} />
+        <Route path="/setting" element={<Setting />} />
       </Routes>
     </>
   );

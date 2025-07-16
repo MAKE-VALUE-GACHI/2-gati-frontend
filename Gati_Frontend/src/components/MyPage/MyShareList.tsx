@@ -25,9 +25,7 @@ const MyShareList = () => {
             key={tab.value}
             onClick={() => setSelectedTab(tab.value)}
             className={`px-4 py-1 rounded-full border text-sm ${
-              selectedTab === tab.value
-                ? "bg-main text-white"
-                : " text-gray-500"
+              selectedTab === tab.value ? "bg-main text-white" : " text-gray"
             }`}
           >
             {tab.label}

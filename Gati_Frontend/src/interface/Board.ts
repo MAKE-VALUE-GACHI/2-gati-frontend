@@ -11,7 +11,10 @@ export interface IBoard {
   id: number;
   title: string;
   writer: string;
+  content?: string;
+  score?: number;
   date: string;
+  category: string;
   price: number;
   imageURL: string;
 }

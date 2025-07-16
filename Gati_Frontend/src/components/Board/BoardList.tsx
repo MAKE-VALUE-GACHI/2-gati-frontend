@@ -62,6 +62,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "한식",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -71,6 +72,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "한식",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -80,6 +82,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "양식",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -89,6 +92,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "양식",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -98,6 +102,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "양식",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -107,6 +112,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "분식",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -116,6 +122,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "디저트",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -125,6 +132,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "디저트",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -134,6 +142,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "디저트",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -143,6 +152,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "디저트",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -152,6 +162,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "식재료",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -161,6 +172,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "식재료",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -170,6 +182,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "식재료",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -179,6 +192,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "기타",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -188,6 +202,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "기타",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -197,6 +212,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "기타",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",
@@ -206,6 +222,7 @@ const dummyBoardList: IBoard[] = [
     title: "제목은 몇 자까지가 좋은 제목일까요?",
     writer: "작성자",
     date: "2025.07.12",
+    category: "양식",
     price: 0,
     imageURL:
       "https://img.daily.co.kr/@files/www.daily.co.kr/content/food/2020/20200730/40d0fb3794229958bdd1e36520a4440f.jpg",

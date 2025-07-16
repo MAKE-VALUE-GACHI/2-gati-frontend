@@ -8,6 +8,7 @@ export default {
       white: "#FFFFFF",
       black: "#000000",
       background: "#F6F6F6",
+      red: "#E94235",
     },
     extend: {
       boxShadow: {

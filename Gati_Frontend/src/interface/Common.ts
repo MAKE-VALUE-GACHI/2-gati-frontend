@@ -6,4 +6,5 @@ export interface IContainer {
 
 export interface IButtonProps {
   text: string;
+  onClick: () => void; // 또는 function?: () => void
 }

@@ -1,7 +1,8 @@
+import { IKeywordProps } from "@interface/Board";
 import { IoSearch } from "react-icons/io5";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ keyword, setKeyword }: IKeywordProps) => {
   const nav = useNavigate();
   const location = useLocation();
 
@@ -21,6 +22,8 @@ const Header = () => {
           <IoSearch className="mr-2" />
           <input
             type="text"
+            value={keyword}
+            onChange={(e) => setKeyword?.(e.target.value)}
             placeholder="검색어를 입력해주세요."
             className="bg-background focus:outline-none w-full text-sm"
           />

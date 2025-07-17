@@ -1,11 +1,12 @@
 import { IBoardProps } from "@interface/Board";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+const BASE_IMAGE_URL = import.meta.env.VITE_BASE_URL.replace("/api/v1", "");
 
 const Board = ({ board }: IBoardProps) => {
   const nav = useNavigate();
-  const location = useLocation();
 
-  const { id, title, writer, date, price, imageURL } = board;
+  const { id, title, nickname, registrationDate, imageUrl } = board;
 
   return (
     <div
@@ -13,7 +14,7 @@ const Board = ({ board }: IBoardProps) => {
       onClick={() => nav("/detail", { state: { id: id } })}
     >
       <img
-        src={imageURL}
+        src={BASE_IMAGE_URL + imageUrl}
         alt={title}
         className="w-20 h-20 object-cover rounded mr-4 flex-shrink-0"
       />
@@ -26,15 +27,15 @@ const Board = ({ board }: IBoardProps) => {
         </div>
 
         <div className="flex gap-12 text-sm text-gray">
-          <span>{writer}</span>
-          <span>{date}</span>
+          <span>{nickname}</span>
+          <span>{registrationDate}</span>
         </div>
 
-        {price === 0 ? (
+        {/* { ===  ? (
           <div className="text-sm font-semibold">무료 나눔</div>
         ) : (
           <div className="text-sm font-semibold">{price}원</div>
-        )}
+        )} */}
       </div>
     </div>
   );

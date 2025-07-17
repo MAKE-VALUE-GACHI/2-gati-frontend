@@ -1,26 +1,45 @@
 export interface ICarouselItem {
   id: number;
-  imageURL: string;
+  imageUrl: string;
   description: string;
   title: string;
-  author: string;
-  location: string;
+  nickname: string;
+  // location: string;
 }
 
 export interface IBoard {
   id: number;
   title: string;
-  writer: string;
+  nickname: string;
   content?: string;
   score?: number;
-  date: string;
-  category: string;
-  price: number;
-  imageURL: string;
+  category?: string;
+  registrationDate: string;
+  price?: number;
+  statuc: string;
+  imageUrl: string[];
+}
+
+export interface IKeywordProps {
+  keyword: string;
+  setKeyword: (v: string) => void;
+}
+
+export interface CategoryProps {
+  onSelect: (category: string) => void;
 }
 
 export interface IBoardProps {
   board: IBoard;
 }
 
-export interface ISearchFilter {}
+export interface IBoardListProps {
+  category: string;
+  keyword: string;
+}
+
+export interface ISearchFilter {
+  category?: string;
+  keyword?: string;
+  sort?: "recommend" | "latest" | "rating";
+}

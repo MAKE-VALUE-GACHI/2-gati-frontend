@@ -1,46 +1,70 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+
 import { ICarouselItem } from "@interface/Board";
+import { getCarouselItems } from "@api/APIInstance";
+
+const BASE_IMAGE_URL = import.meta.env.VITE_BASE_URL.replace("/api/v1", "");
 
 const Carousel = () => {
+  const [data, setData] = useState<ICarouselItem[]>(dummyCarouselData);
   const [index, setIndex] = useState<number>(0);
-  const total = dummyData.length;
+  const total = data.length;
 
   const handleNext = () => setIndex((prev) => (prev + 1) % total);
   const handlePrev = () => setIndex((prev) => (prev - 1 + total) % total);
 
+  const fetchData = async () => {
+    try {
+      const response = await getCarouselItems(); // getCarouselItems가 AxiosResponse를 반환
+      const items = response.data as ICarouselItem[]; // 여기서 data만 추출
+
+      setData(items);
+      console.log(items);
+    } catch (err) {
+      console.error("Carousel 데이터를 불러오지 못했습니다.", err);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className="relative w-full max-w-3xl h-96 mx-auto overflow-hidden shadow-lg">
       <AnimatePresence mode="wait">
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}
-          transition={{ duration: 0.5 }}
-          className="relative w-full h-full"
-        >
-          <img
-            src={dummyData[index].imageURL}
-            alt={dummyData[index].title}
-            className="w-full h-full object-cover"
-          />
+        {data.length > 0 && (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.5 }}
+            className="relative w-full h-full"
+          >
+            <img
+              // src={data[index].imageUrl}
+              src={BASE_IMAGE_URL + data[index].imageUrl}
+              alt={data[index].title}
+              className="w-full h-full object-cover"
+            />
 
-          {/* Text Overlay */}
-          <div className="absolute inset-0 flex flex-col justify-end text-white bg-gradient-to-t from-black/80 to-transparent p-6 mb-8">
-            <p className="text-sm mb-1">{dummyData[index].description}</p>
-            <div className="flex items-center mb-1">
-              <h2 className="text-3xl font-extrabold mr-2">
-                {dummyData[index].title}
-              </h2>
+            {/* Text Overlay */}
+            <div className="absolute inset-0 flex flex-col justify-end text-white bg-gradient-to-t from-black/80 to-transparent p-12 ">
+              <p className="text-sm mb-1">{data[index].description}</p>
+              <div className="flex items-center mb-1">
+                <h2 className="text-3xl font-extrabold mr-2">
+                  {data[index].title}
+                </h2>
+              </div>
+              <span className="text-sm text-gray-200">
+                made by. {data[index].nickname}
+              </span>
+              {/* <p className="text-sm">in {data[index].location}</p> */}
             </div>
-            <span className="text-sm text-gray-200">
-              made by. {dummyData[index].author}
-            </span>
-            {/* <p className="text-sm">in {dummyData[index].location}</p> */}
-          </div>
-        </motion.div>
+          </motion.div>
+        )}
       </AnimatePresence>
 
       <button
@@ -57,7 +81,7 @@ const Carousel = () => {
       </button>
 
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-        {dummyData.map((_, i) => (
+        {data.map((_, i) => (
           <div
             key={i}
             className={`w-3 h-3 rounded-full ${
@@ -72,60 +96,53 @@ const Carousel = () => {
 
 export default Carousel;
 
-// 더미데이터
-const dummyData: ICarouselItem[] = [
+const dummyCarouselData: ICarouselItem[] = [
   {
     id: 1,
-    imageURL:
-      "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
-    description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
-    title: "육회비빔밥돌솥정식",
-    author: "송정동맛주먹",
-    location: "부산광역시 해운대구 송정동",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH2m0hJryg8ZVARKKHMCTLLKpm2xCZ5G93Hg&s",
+    description: "정성껏 만든 김치전입니다. 나눔 감사합니다!",
+    title: "수제 김치전",
+    nickname: "맛집러버",
   },
   {
     id: 2,
-    imageURL:
-      "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
-    description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
-    title: "마라로제크림파스타",
-    author: "송정동맛주먹",
-    location: "부산광역시 해운대구 송정동",
+    imageUrl:
+      "https://blog.kakaocdn.net/dna/bl03A6/btqELSITKIH/AAAAAAAAAAAAAAAAAAAAAIZZ_K4twwnSt_bWunMYFV7voP9VlEAviRZ3TaRtoRxK/img.jpg?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1753973999&allow_ip=&allow_referer=&signature=btdukU4OcjbR7NtNCEMKQLt5x1U%3D",
+    description: "직접 구운 쿠키를 나눔합니다. 따뜻할 때 드세요 :)",
+    title: "초코칩 쿠키",
+    nickname: "베이킹하는여자",
   },
   {
     id: 3,
-    imageURL:
-      "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
-    description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
-    title: "내가 집에서 만든 쿠키",
-    author: "송정동맛주먹",
-    location: "부산광역시 해운대구 송정동",
+    imageUrl:
+      "https://semie.cooking/image/board/cooking/qv/zy/chdomvpn/118548948ldcb.jpg",
+    description: "남은 식빵으로 만든 프렌치토스트 나눔해요.",
+    title: "프렌치 토스트",
+    nickname: "한끼마스터",
   },
   {
     id: 4,
-    imageURL:
-      "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
-    description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
-    title: "참치마요계란치즈김밥튀김롤",
-    author: "송정동맛주먹",
-    location: "부산광역시 해운대구 송정동",
+    imageUrl:
+      "https://i.ytimg.com/vi/5EEinTWdkW4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCEH1aI01omr2_eee3xXTLwxjr3BQ",
+    description: "먹다 남은 떡볶이인데 양이 많아서 나눔합니다!",
+    title: "매콤달콤 떡볶이",
+    nickname: "매운맛중독",
   },
   {
     id: 5,
-    imageURL:
-      "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
-    description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
-    title: "떡국떡 떡볶이",
-    author: "송정동맛주먹",
-    location: "부산광역시 해운대구 송정동",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0FebyObhqsjTo7lxYfkK1Z2eloqK5jBF6iA&s",
+    description: "직접 만든 수제 피클이에요. 햄버거나 샌드위치랑 잘 어울려요.",
+    title: "수제 오이피클당근무",
+    nickname: "저염장인",
   },
   {
     id: 6,
-    imageURL:
-      "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
-    description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
-    title: "떡국떡 떡볶이",
-    author: "송정동맛주먹",
-    location: "부산광역시 해운대구 송정동",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0FebyObhqsjTo7lxYfkK1Z2eloqK5jBF6iA&s",
+    description: "제가 잎만 쓰고 싶은데, 흰 부분 상하기 전에 가져가세요!",
+    title: "파 흰부분 필요하신 분",
+    nickname: "우리집 요리사는 나야나",
   },
 ];

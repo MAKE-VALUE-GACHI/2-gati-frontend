@@ -1,51 +1,41 @@
-const Category = () => {
+import { CategoryProps } from "@interface/Board";
+import { useState } from "react";
+
+const Category = ({ onSelect }: CategoryProps) => {
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  const categories = [
+    { label: "한식", icon: "/assets/bibimbap.png" },
+    { label: "양식", icon: "/assets/pasta.png" },
+    { label: "분식", icon: "/assets/can.png" },
+    { label: "디저트", icon: "/assets/dessert.png" },
+    { label: "식재료", icon: "/assets/ingredient.png" },
+    { label: "기타", icon: "/assets/etc.png" },
+  ];
+
+  const handleSelect = (label: string) => {
+    setSelectedCategory(label);
+    onSelect(label); // 외부로 선택된 값 전달
+  };
+
   return (
-    <>
-      <div className="flex p-4 justify-evenly">
-        <div className="flex flex-1 flex-col items-center justify-between gap-2">
+    <div className="flex p-4 justify-evenly">
+      {categories.map(({ label, icon }) => (
+        <div
+          key={label}
+          onClick={() => handleSelect(label)}
+          className="flex flex-1 flex-col items-center gap-2 cursor-pointer"
+        >
           <img
-            src="/assets/bibimbap.png"
-            className="w-16 h-16 p-2 bg-white rounded-xl"
+            src={icon}
+            className={`w-16 h-16 p-2 rounded-xl ${
+              selectedCategory === label ? "bg-main" : "bg-white"
+            }`}
           />
-          <span className="text-sm">한식</span>
+          <span className="text-sm">{label}</span>
         </div>
-        <div className="flex flex-1 flex-col items-center justify-between gap-2">
-          <img
-            src="/assets/pasta.png"
-            className="w-16 h-16 p-2 bg-white rounded-xl"
-          />
-          <span className="text-sm">양식</span>
-        </div>
-        <div className="flex flex-1 flex-col items-center justify-between gap-2">
-          <img
-            src="/assets/can.png"
-            className="w-16 h-16 p-2 bg-white rounded-xl"
-          />
-          <span className="text-sm">분식</span>
-        </div>
-        <div className="flex flex-1 flex-col items-center justify-between gap-2">
-          <img
-            src="/assets/dessert.png"
-            className="w-16 h-16 p-2 bg-white rounded-xl"
-          />
-          <span className="text-sm">디저트</span>
-        </div>
-        <div className="flex flex-1 flex-col items-center justify-between gap-2">
-          <img
-            src="/assets/ingredient.png"
-            className="w-16 h-16 p-2 bg-white rounded-xl"
-          />
-          <span className="text-sm">식재료</span>
-        </div>
-        <div className="flex flex-1 flex-col items-center justify-between gap-2">
-          <img
-            src="/assets/etc.png"
-            className="w-16 h-16 p-2 bg-white rounded-xl"
-          />
-          <span className="text-sm">기타</span>
-        </div>
-      </div>
-    </>
+      ))}
+    </div>
   );
 };
 

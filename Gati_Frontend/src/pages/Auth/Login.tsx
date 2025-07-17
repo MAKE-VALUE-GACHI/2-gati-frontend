@@ -35,7 +35,7 @@ const Login = () => {
     <div className="flex flex-col">
       <Header />
 
-      <h1 className="text-3xl font-bold mt-[96px] p-6">로그인</h1>
+      <h1 className="font-beanpole text-3xl font-bold mt-[96px] p-6">로그인</h1>
       <div className="px-6 pb-4">
         <span>한국인은 밥심이니까, </span>
         <span className="font-bold">한끼하자!</span>

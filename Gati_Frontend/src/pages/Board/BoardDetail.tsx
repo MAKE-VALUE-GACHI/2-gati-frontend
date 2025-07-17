@@ -37,7 +37,7 @@ const BoardDetail = () => {
   const { title, content, writer, category, date, score, price, imageURL } =
     boardDetail;
 
-  const onClick = () => nav("/chat");
+  const onClick = () => nav("/review");
 
   return (
     <ContainerTemplate>
@@ -83,7 +83,7 @@ const BoardDetail = () => {
       </div>
 
       {/* 나중에 작성자와 로그인된 사람이 일치하는지 확인 */}
-      <Button text={"채팅 보내기"} onClick={onClick} />
+      <Button text={"후기 보내기"} onClick={onClick} />
     </ContainerTemplate>
   );
 };

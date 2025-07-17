@@ -11,6 +11,9 @@ export default {
       red: "#E94235",
     },
     extend: {
+      fontFamily: {
+        beanpole: ["BeanpoleBold", "sans-serif"],
+      },
       boxShadow: {
         sm: "0 4px 15px rgba(0, 0, 0, 0.1)",
         lg: "0 10px 25px rgba(0, 0, 0, 0.1)",

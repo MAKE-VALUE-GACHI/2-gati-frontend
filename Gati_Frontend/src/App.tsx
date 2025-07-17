@@ -8,6 +8,7 @@ import ChatList from "@pages/Sharing/Chat";
 import Setting from "@pages/MyPage/Setting";
 import CreateBoard from "@pages/Board/CreateBoard";
 import BoardDetail from "@pages/Board/BoardDetail";
+import CreateReview from "@pages/Review/CreateReview";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/setting" element={<Setting />} />
         <Route path="/create" element={<CreateBoard />} />
         <Route path="/detail" element={<BoardDetail />} />
+        <Route path="/review" element={<CreateReview />} />
       </Routes>
     </>
   );

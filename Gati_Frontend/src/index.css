@@ -8,10 +8,16 @@ html {
   font-family: "Pretendard";
 }
 
+@font-face {
+  font-family: "BeanpoleBold";
+  src: url("/fonts/BeanpoleBold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 html,
 body,
 #root {
   height: 100%;
-  font-family: "Pretendard", sans-serif;
   background-color: rgb(246, 246, 246);
 }

@@ -1,8 +1,13 @@
-const Button = (/* 여기에 버튼에 들어갈 글씨를 상속받습니다. */) => {
+import { IButtonProps } from "@interface/Common";
+
+const Button = ({ text, onClick }: IButtonProps) => {
   return (
-    <>
-      <span>여기에 버튼 내용이 들어갑니다.</span>
-    </>
+    <button
+      onClick={onClick}
+      className="mx-6 p-2 bg-main text-white font-bold text-lg rounded"
+    >
+      <span>{text}</span>
+    </button>
   );
 };
 

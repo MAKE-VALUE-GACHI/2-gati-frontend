@@ -28,7 +28,7 @@ const Carousel = () => {
           />
 
           {/* Text Overlay */}
-          <div className="absolute inset-0 flex flex-col justify-end text-white bg-gradient-to-t from-black/80 to-transparent p-6 mb-8">
+          <div className="absolute inset-0 flex flex-col justify-end text-white bg-gradient-to-t from-black/80 to-transparent p-12">
             <p className="text-sm mb-1">{dummyData[index].description}</p>
             <div className="flex items-center mb-1">
               <h2 className="text-3xl font-extrabold mr-2">
@@ -77,8 +77,8 @@ const dummyData: ICarouselItem[] = [
   {
     id: 1,
     imageURL:
-      "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
-    description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
+      "https://media-cdn.tripadvisor.com/media/photo-m/1280/19/78/ca/f0/bee-tartar-hot-pot-rice.jpg",
+    description: "육회에서 나오는 기깔난 감칠맛",
     title: "육회비빔밥돌솥정식",
     author: "송정동맛주먹",
     location: "부산광역시 해운대구 송정동",
@@ -86,26 +86,26 @@ const dummyData: ICarouselItem[] = [
   {
     id: 2,
     imageURL:
-      "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
-    description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
+      "https://recipe1.ezmember.co.kr/cache/recipe/2023/06/30/c6d584fdf29f53da6b2426925f694a751.jpg",
+    description: "이 구역 마라왕은 나야",
     title: "마라로제크림파스타",
     author: "송정동맛주먹",
-    location: "부산광역시 해운대구 송정동",
+    location: "부산광역시 해운대구 좌동",
   },
   {
     id: 3,
     imageURL:
-      "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
-    description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
+      "https://recipe1.ezmember.co.kr/cache/recipe/2022/12/29/4f31f5d3d59e970221db46585f1552f31.jpg",
+    description: "쫜득, 달달, 식후 디저트로 딱이에요!",
     title: "내가 집에서 만든 쿠키",
     author: "송정동맛주먹",
-    location: "부산광역시 해운대구 송정동",
+    location: "부산광역시 해운대구 우동",
   },
   {
     id: 4,
     imageURL:
-      "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
-    description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
+      "https://mblogthumb-phinf.pstatic.net/20130703_164/j486love_1372812981909NYPRG_JPEG/1.jpg?type=w420",
+    description: "튀김 안 같지만, 튀김입니다.",
     title: "참치마요계란치즈김밥튀김롤",
     author: "송정동맛주먹",
     location: "부산광역시 해운대구 송정동",
@@ -113,7 +113,7 @@ const dummyData: ICarouselItem[] = [
   {
     id: 5,
     imageURL:
-      "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
+      "https://recipe1.ezmember.co.kr/cache/recipe/2022/03/17/476a4899e28e7fbcc07922840fdee1041.jpg",
     description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
     title: "떡국떡 떡볶이",
     author: "송정동맛주먹",
@@ -122,9 +122,9 @@ const dummyData: ICarouselItem[] = [
   {
     id: 6,
     imageURL:
-      "https://images.unsplash.com/photo-1635363638580-c2809d049eee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVEJTk1JTlDJUVDJThCJTlEfGVufDB8fDB8fHww",
-    description: "설날 떡국떡 아직도 못 해결해서 태랑 생산 했어요...",
-    title: "떡국떡 떡볶이",
+      "https://semie.cooking/image/contents/recipe/xk/kq/jfbxseez/IRD/121453233rmzq.jpg",
+    description: "이런 계란말이 먹어본 사람~~?",
+    title: "폭신달달 계란말이",
     author: "송정동맛주먹",
     location: "부산광역시 해운대구 송정동",
   },

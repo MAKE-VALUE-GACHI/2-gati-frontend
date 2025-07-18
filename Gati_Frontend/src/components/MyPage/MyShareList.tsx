@@ -68,25 +68,25 @@ const dummySharedList: IShared[] = [
   {
     id: 1,
     imageURL:
-      "https://m.mmjt.kr/web/product/big/202108/7cce8a73c60a92db5c257b50548981db.jpg",
+      "https://www.adobe.com/kr/creativecloud/photography/hub/features/media_19243bf806dc1c5a3532f3e32f4c14d44f81cae9f.jpeg?width=750&format=jpeg&optimize=medium",
     type: "post",
   },
   {
     id: 2,
     imageURL:
-      "https://m.mmjt.kr/web/product/big/202108/7cce8a73c60a92db5c257b50548981db.jpg",
+      "https://img.freepik.com/free-photo/cheesy-tokbokki-korean-traditional-food-black-board-background-lunch-dish_1150-42992.jpg?t=st=1733530111~exp=1733533711~hmac=a74f2349300833f6b4b622be6d131817ad5278c4f050a732e262fc14f5092a4e",
     type: "post",
   },
   {
     id: 4,
     imageURL:
-      "https://m.mmjt.kr/web/product/big/202108/7cce8a73c60a92db5c257b50548981db.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0z47TKwDwkL3NkJiUWug_d-snxkQILQvo5ERCFp5e2S0Dci-M0Vk0IvOC3iwbBQ2h7FY&usqp=CAU",
     type: "post",
   },
   {
     id: 5,
     imageURL:
-      "https://m.mmjt.kr/web/product/big/202108/7cce8a73c60a92db5c257b50548981db.jpg",
+      "https://recipe1.ezmember.co.kr/cache/recipe/2024/01/11/f1e0660aa902ab16810f1c7236db7ecc1.jpg",
     type: "post",
   },
   {
@@ -99,20 +99,20 @@ const dummySharedList: IShared[] = [
   {
     id: 7,
     imageURL:
-      "https://m.mmjt.kr/web/product/big/202108/7cce8a73c60a92db5c257b50548981db.jpg",
+      "https://static.wtable.co.kr/image/production/service/recipe/67/56362d9f-d8b4-4d66-8cab-99904f02ea36.jpg",
     type: "post",
   },
   {
     id: 8,
     imageURL:
-      "https://m.mmjt.kr/web/product/big/202108/7cce8a73c60a92db5c257b50548981db.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0DCsAIJATKe2aInqg1RWuca2BzDoMnqGPdA&s",
     type: "review",
     score: 5,
   },
   {
     id: 9,
     imageURL:
-      "https://m.mmjt.kr/web/product/big/202108/7cce8a73c60a92db5c257b50548981db.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCgWPkANWW1oVrU0S-_tA7s2DlDnh-wX1Vhg&s",
     type: "post",
   },
 ];

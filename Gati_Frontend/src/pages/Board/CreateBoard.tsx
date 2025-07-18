@@ -5,7 +5,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const categoryOptions = [
-  { value: "", label: "음식 종류를 선택해주세요." },
   { value: "KOREAN", label: "한식" },
   { value: "WESTERN", label: "양식" },
   { value: "SNACK", label: "분식" },
@@ -61,6 +60,7 @@ const CreateBoard = () => {
   const isFormValid = !!(title && category && content && image && type);
 
   const onClick = () => {
+    alert("새 글이 등록되었습니다!");
     nav("/");
   };
 

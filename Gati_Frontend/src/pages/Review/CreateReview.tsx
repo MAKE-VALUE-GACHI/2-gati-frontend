@@ -2,8 +2,11 @@ import { useState } from "react";
 import ContainerTemplate from "@components/Container";
 import { FaStar } from "react-icons/fa";
 import Button from "@components/Common/Button";
+import { useNavigate } from "react-router-dom";
 
 const CreateReview = () => {
+  const nav = useNavigate();
+
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number | null>(null);
   const [title, setTitle] = useState("");
@@ -20,7 +23,9 @@ const CreateReview = () => {
     };
 
     // 실제 POST 요청 (예: axios.post('/api/review', payload))
-    console.log("제출 데이터:", payload);
+
+    alert("후기가 등록되었습니다!");
+    nav("/");
   };
 
   return (

@@ -1,51 +1,37 @@
-const Category = () => {
+const categories = [
+  { name: "한식", img: "/assets/bibimbap.png" },
+  { name: "양식", img: "/assets/pasta.png" },
+  { name: "분식", img: "/assets/can.png" },
+  { name: "디저트", img: "/assets/dessert.png" },
+  { name: "식재료", img: "/assets/ingredient.png" },
+  { name: "기타", img: "/assets/etc.png" },
+];
+
+const Category = ({
+  selected,
+  onSelect,
+}: {
+  selected: string;
+  onSelect: (cat: string) => void;
+}) => {
   return (
-    <>
-      <div className="flex p-4 justify-evenly">
-        <div className="flex flex-1 flex-col items-center justify-between gap-2">
+    <div className="flex p-4 justify-evenly">
+      {categories.map((cat) => (
+        <div
+          key={cat.name}
+          className="flex flex-col items-center cursor-pointer"
+          onClick={() => onSelect(cat.name)}
+        >
           <img
-            src="/assets/bibimbap.png"
-            className="w-16 h-16 p-2 bg-white rounded-xl"
+            src={cat.img}
+            className={`w-16 h-16 rounded-xl p-2 ${
+              selected === cat.name ? "bg-main" : "bg-white"
+            }`}
           />
-          <span className="text-sm">한식</span>
+          <span className="text-sm">{cat.name}</span>
         </div>
-        <div className="flex flex-1 flex-col items-center justify-between gap-2">
-          <img
-            src="/assets/pasta.png"
-            className="w-16 h-16 p-2 bg-white rounded-xl"
-          />
-          <span className="text-sm">양식</span>
-        </div>
-        <div className="flex flex-1 flex-col items-center justify-between gap-2">
-          <img
-            src="/assets/can.png"
-            className="w-16 h-16 p-2 bg-white rounded-xl"
-          />
-          <span className="text-sm">분식</span>
-        </div>
-        <div className="flex flex-1 flex-col items-center justify-between gap-2">
-          <img
-            src="/assets/dessert.png"
-            className="w-16 h-16 p-2 bg-white rounded-xl"
-          />
-          <span className="text-sm">디저트</span>
-        </div>
-        <div className="flex flex-1 flex-col items-center justify-between gap-2">
-          <img
-            src="/assets/ingredient.png"
-            className="w-16 h-16 p-2 bg-white rounded-xl"
-          />
-          <span className="text-sm">식재료</span>
-        </div>
-        <div className="flex flex-1 flex-col items-center justify-between gap-2">
-          <img
-            src="/assets/etc.png"
-            className="w-16 h-16 p-2 bg-white rounded-xl"
-          />
-          <span className="text-sm">기타</span>
-        </div>
-      </div>
-    </>
+      ))}
+    </div>
   );
 };
 

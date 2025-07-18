@@ -52,7 +52,7 @@ const Carousel = () => {
 
             {/* Text Overlay */}
             <div className="absolute inset-0 flex flex-col justify-end text-white bg-gradient-to-t from-black/80 to-transparent p-12 ">
-              <p className="text-sm mb-1">{data[index].description}</p>
+              <p className="text-sm mb-1">{data[index].content}</p>
               <div className="flex items-center mb-1">
                 <h2 className="text-3xl font-extrabold mr-2">
                   {data[index].title}
@@ -101,7 +101,7 @@ const dummyCarouselData: ICarouselItem[] = [
     id: 1,
     imageUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH2m0hJryg8ZVARKKHMCTLLKpm2xCZ5G93Hg&s",
-    description: "정성껏 만든 김치전입니다. 나눔 감사합니다!",
+    content: "정성껏 만든 김치전입니다. 나눔 감사합니다!",
     title: "수제 김치전",
     nickname: "맛집러버",
   },
@@ -109,7 +109,7 @@ const dummyCarouselData: ICarouselItem[] = [
     id: 2,
     imageUrl:
       "https://blog.kakaocdn.net/dna/bl03A6/btqELSITKIH/AAAAAAAAAAAAAAAAAAAAAIZZ_K4twwnSt_bWunMYFV7voP9VlEAviRZ3TaRtoRxK/img.jpg?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1753973999&allow_ip=&allow_referer=&signature=btdukU4OcjbR7NtNCEMKQLt5x1U%3D",
-    description: "직접 구운 쿠키를 나눔합니다. 따뜻할 때 드세요 :)",
+    content: "직접 구운 쿠키를 나눔합니다. 따뜻할 때 드세요 :)",
     title: "초코칩 쿠키",
     nickname: "베이킹하는여자",
   },
@@ -117,7 +117,7 @@ const dummyCarouselData: ICarouselItem[] = [
     id: 3,
     imageUrl:
       "https://semie.cooking/image/board/cooking/qv/zy/chdomvpn/118548948ldcb.jpg",
-    description: "남은 식빵으로 만든 프렌치토스트 나눔해요.",
+    content: "남은 식빵으로 만든 프렌치토스트 나눔해요.",
     title: "프렌치 토스트",
     nickname: "한끼마스터",
   },
@@ -125,7 +125,7 @@ const dummyCarouselData: ICarouselItem[] = [
     id: 4,
     imageUrl:
       "https://i.ytimg.com/vi/5EEinTWdkW4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCEH1aI01omr2_eee3xXTLwxjr3BQ",
-    description: "먹다 남은 떡볶이인데 양이 많아서 나눔합니다!",
+    content: "먹다 남은 떡볶이인데 양이 많아서 나눔합니다!",
     title: "매콤달콤 떡볶이",
     nickname: "매운맛중독",
   },
@@ -133,7 +133,7 @@ const dummyCarouselData: ICarouselItem[] = [
     id: 5,
     imageUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0FebyObhqsjTo7lxYfkK1Z2eloqK5jBF6iA&s",
-    description: "직접 만든 수제 피클이에요. 햄버거나 샌드위치랑 잘 어울려요.",
+    content: "직접 만든 수제 피클이에요. 햄버거나 샌드위치랑 잘 어울려요.",
     title: "수제 오이피클당근무",
     nickname: "저염장인",
   },
@@ -141,7 +141,7 @@ const dummyCarouselData: ICarouselItem[] = [
     id: 6,
     imageUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0FebyObhqsjTo7lxYfkK1Z2eloqK5jBF6iA&s",
-    description: "제가 잎만 쓰고 싶은데, 흰 부분 상하기 전에 가져가세요!",
+    content: "제가 잎만 쓰고 싶은데, 흰 부분 상하기 전에 가져가세요!",
     title: "파 흰부분 필요하신 분",
     nickname: "우리집 요리사는 나야나",
   },

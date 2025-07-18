@@ -1,7 +1,7 @@
 export interface ICarouselItem {
   id: number;
   imageUrl: string;
-  description: string;
+  content: string;
   title: string;
   nickname: string;
   // location: string;

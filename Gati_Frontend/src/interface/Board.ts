@@ -43,3 +43,11 @@ export interface ISearchFilter {
   keyword?: string;
   sort?: "recommend" | "latest" | "rating";
 }
+
+export interface ICreateBoardFirstProps {
+  onNext: () => void;
+}
+
+export interface ICreateBoardLastProps {
+  onSubmit: () => void;
+}

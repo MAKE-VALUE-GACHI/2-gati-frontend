@@ -6,9 +6,9 @@ import SearchList from "@pages/Search/Search";
 import MyPage from "@pages/MyPage/MyPage";
 import ChatList from "@pages/Sharing/Chat";
 import Setting from "@pages/MyPage/Setting";
-import CreateBoard from "@pages/Board/CreateBoard";
 import BoardDetail from "@pages/Board/BoardDetail";
 import CreateReview from "@pages/Review/CreateReview";
+import CreateBoard from "@pages/Board/CreateBoard";
 
 const App = () => {
   return (

@@ -12,12 +12,12 @@ export interface IBoard {
   title: string;
   nickname: string;
   content?: string;
-  score?: number;
   category?: string;
   registrationDate: string;
+  status: "AVAILABLE" | "SOLD_OUT" | string;
+  imageUrls: string[];
   price?: number;
-  statuc: string;
-  imageUrl: string[];
+  score?: number;
 }
 
 export interface IKeywordProps {
@@ -50,4 +50,14 @@ export interface ICreateBoardFirstProps {
 
 export interface ICreateBoardLastProps {
   onSubmit: () => void;
+}
+
+export interface ICreateBoard {
+  title: string;
+  category: string;
+  content: string;
+  type: "SHARE" | "TRADE";
+  status: "AVAILABLE";
+  price?: number; // SHARE면 0으로 보냄
+  image: File | null;
 }

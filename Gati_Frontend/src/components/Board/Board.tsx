@@ -6,15 +6,15 @@ const BASE_IMAGE_URL = import.meta.env.VITE_BASE_URL.replace("/api/v1", "");
 const Board = ({ board }: IBoardProps) => {
   const nav = useNavigate();
 
-  const { id, title, nickname, registrationDate, imageUrl } = board;
+  const { id, title, nickname, registrationDate, imageUrls } = board;
 
   return (
     <div
       className="flex items-center p-4 w-full max-w-full bg-white mb-2 rounded"
-      onClick={() => nav("/detail", { state: { id: id } })}
+      onClick={() => nav(`/detail/${id}`)}
     >
       <img
-        src={BASE_IMAGE_URL + imageUrl}
+        // src={BASE_IMAGE_URL + imageUrls[0]}
         alt={title}
         className="w-20 h-20 object-cover rounded mr-4 flex-shrink-0"
       />

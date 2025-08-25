@@ -30,6 +30,7 @@ const CreateBoardFourth = ({ onSubmit }: ICreateBoardLastProps) => {
       alert(validation.message);
       return;
     }
+
     onSubmit(); // 마지막 단계이므로 제출
   };
 

@@ -1,4 +1,5 @@
 import { IBoardProps } from "@interface/Board";
+import { formatDate } from "@utils/formatDate";
 import { useNavigate } from "react-router-dom";
 
 const BASE_IMAGE_URL = import.meta.env.VITE_BASE_URL.replace("/api/v1", "");
@@ -28,7 +29,7 @@ const Board = ({ board }: IBoardProps) => {
 
         <div className="flex gap-12 text-sm text-gray">
           <span>{nickname}</span>
-          <span>{registrationDate}</span>
+          <span>{formatDate(registrationDate)}</span>
         </div>
 
         {/* { ===  ? (

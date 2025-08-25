@@ -9,6 +9,7 @@ import Button from "@components/Common/Button";
 import Loading from "@components/Common/Loading";
 import WriterReview from "@components/Review/WriterReview";
 import { getBoardDetail } from "@api/APIInstance";
+import { formatDate } from "@utils/formatDate";
 
 const BASE_IMAGE_URL = import.meta.env.VITE_BASE_URL.replace("/api/v1", "");
 
@@ -20,8 +21,9 @@ const BoardDetail = () => {
 
   const getBoardDetailData = async (id: string) => {
     try {
-      console.log(id);
       const res = await getBoardDetail(id);
+
+      console.log(res.data);
 
       setTimeout(() => {
         setBoardDetail({ ...res.data, id: Number(id) });
@@ -98,7 +100,7 @@ const BoardDetail = () => {
             ))}
           </p>
           <p>
-            {score}점 | {registrationDate}
+            {score}점 | {formatDate(registrationDate)}
           </p>
         </div>
 
